@@ -1,6 +1,6 @@
 Instruction Jurisdiction Doctrine
 
-This doctrine classifies compute by control-plane authority, not FLOPS.
+This document defines a general operating-system protocol for deterministic compute by classifying hardware according to control-plane authority, not performance metrics. It is OS-level policy, not an AI system. AI inference is used as a validating workload because it exposes scheduler noise, latency, thermal instability, and memory contention clearly, but it is not the scope of the doctrine.
 
 Level 1: Sovereign Compute (Public Square)
 - Instruction surface is directly addressable by the local kernel MMU.
