@@ -1,0 +1,4 @@
+[Unit]
+Description=FabricTreaty Sovereign AI Profile (opt-in)
+Wants=fabricd.service
+After=multi-user.target
