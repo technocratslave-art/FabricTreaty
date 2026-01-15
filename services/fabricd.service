@@ -1,0 +1,26 @@
+[Unit]
+Description=FabricTreaty Sovereign Governor (fabricd)
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/fabricd
+Restart=always
+
+# Jurisdiction: confine to performance-class cores (override per machine)
+CPUAffinity=4 5 6 7
+
+# Determinism: real-time round-robin
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=90
+
+# Lockdown: wire memory for the safe fabric pool (KiB)
+LimitMEMLOCK=16384
+
+# Containment
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
